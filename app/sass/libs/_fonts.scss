@@ -1,0 +1,46 @@
+$qanelaslight: 'Qanelas Light';
+$qanelasregular: 'Qanelas Regular';
+$qanelassemibold: 'Qanelas Semi Bold';
+$opensansregular: 'Open Sans Regular';
+$opensansbold: 'Open Sans Bold';
+
+@font-face {
+  font-family: 'Qanelas Light';
+  src: url('../fonts/Qanelas/QanelasLight.eot') format('embedded-opentype'),
+  url('../fonts/Qanelas/QanelasLight.woff2') format('woff2'),
+  url('../fonts/Qanelas/QanelasLight.woff') format('woff'),
+  url('../fonts/Qanelas/QanelasLight.ttf') format('truetype'),
+  url('../fonts/Qanelas/QanelasLight.svg') format('svg');
+}
+@font-face {
+  font-family: 'Qanelas Regular';
+  src: url('../fonts/Qanelas/QanelasRegular.eot') format('embedded-opentype'),
+  url('../fonts/Qanelas/QanelasRegular.woff2') format('woff2'),
+  url('../fonts/Qanelas/QanelasRegular.woff') format('woff'),
+  url('../fonts/Qanelas/QanelasRegular.ttf') format('truetype'),
+  url('../fonts/Qanelas/QanelasRegular.svg') format('svg');
+}
+@font-face {
+  font-family: 'Qanelas Semi Bold';
+  src: url('../fonts/Qanelas/QanelasSemiBold.eot') format('embedded-opentype'),
+  url('../fonts/Qanelas/QanelasSemiBold.woff2') format('woff2'),
+  url('../fonts/Qanelas/QanelasSemiBold.woff') format('woff'),
+  url('../fonts/Qanelas/QanelasSemiBold.ttf') format('truetype'),
+  url('../fonts/Qanelas/QanelasSemiBold.svg') format('svg');
+}
+@font-face {
+  font-family: 'Open Sans Regular';
+  src: url('../fonts/OpenSans/OpenSansRegular.eot') format('embedded-opentype'),
+  url('../fonts/OpenSans/OpenSansRegular.woff2') format('woff2'),
+  url('../fonts/OpenSans/OpenSansRegular.woff') format('woff'),
+  url('../fonts/OpenSans/OpenSansRegular.ttf') format('truetype'),
+  url('../fonts/OpenSans/OpenSansRegular.svg') format('svg');
+}
+@font-face {
+  font-family: 'Open Sans Bold';
+  src: url('../fonts/OpenSans/OpenSansBold.eot') format('embedded-opentype'),
+  url('../fonts/OpenSans/OpenSansBold.woff2') format('woff2'),
+  url('../fonts/OpenSans/OpenSansBold.woff') format('woff'),
+  url('../fonts/OpenSans/OpenSansBold.ttf') format('truetype'),
+  url('../fonts/OpenSans/OpenSansBold.svg') format('svg');
+}
