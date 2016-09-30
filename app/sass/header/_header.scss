@@ -36,7 +36,71 @@
       border: none;
       background-color: transparent;
       border-radius: 0px;
-      .dropdown{
+      .navbar-nav{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        width: 100%;
+        /*height: 60px;*/
+        position: relative;
+        float: left;
+        li {
+          flex: 1;
+          display: block;
+          float: left;
+          background-color: #ff9d20;
+          a {
+            display: block;
+            position: relative;
+            width: 100%;
+            float: left;
+            text-align: center;
+            text-transform: uppercase;
+            background-color: transparent;
+            color: black;
+            font-family: $qanelassemibold;
+            font-size: 18px;
+            padding: 20px 15px;
+            &:hover{
+              color: #ffffff;
+            }
+            &::before, &::after {//создаем блоки, у которых появляется границы
+              box-sizing: border-box;
+              content: '';
+              position: absolute;
+              border-radius: 3px;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+            }
+            &::before {//блоку перед ссылкой добавляется
+              border-top: 2px solid #72385f;//граница сверху
+              border-bottom: 2px solid #72385f;//граница снизу
+              transform: scale3d(0,1,1); // сжимаем только ширину до 0
+            }
+            &::after {//блоку после ссылки добавляется
+              border-left: 2px solid #72385f;//граница слева
+              border-right: 2px solid #72385f;//граница справа
+              transform: scale3d(1,0,1); // сжимаем только высоту до 0
+            }
+            &:hover::before, &:hover::after {//при наведении на ссылку
+              transform: scale3d(1,1,1); // ширина и высота отражается на полную величину
+              transition: transform 0.5s;// со скоростью 0,5 секунд
+            }
+          }
+        }
+        li.active{
+          background-color: #b9d936;
+          a{
+            background-color: transparent;
+            &:hover{
+              color: #ffffff;
+            }
+          }
+        }
+      }
+      /*.dropdown{
         .dropdown-toggle{
           display: block;
           position: relative;
@@ -107,7 +171,7 @@
         .dropdown-menu{
           background-color: #72385f;
         }
-      }
+      }*/
     }
   }
 }

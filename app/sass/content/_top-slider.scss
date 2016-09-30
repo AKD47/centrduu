@@ -4,24 +4,31 @@
   width: 100%;
   float: left;
   background-color: #f1f2f6;
+  background-image: url("../img/top-slider-bg.png");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;
   &__box{
     display: block;
     position: relative;
     width: 100%;
     overflow: hidden;
     float: left;
+    border: 2px solid #000000;
     margin-top: 10px;
     margin-bottom: 10px;
+    box-shadow: 0px 0px 16px 5px #000000;
     &--item{
       display: block;
       position: relative;
       width: 100%;
       float: left;
-      &:hover{
+      /*&:hover{
         .top-slider__box--content{
           opacity: 1;
         }
-      }
+      }*/
     }
     &--img{
       display: block;
@@ -45,7 +52,7 @@
       bottom: 0px;
       padding: 20px;
       background-color: rgba(0,0,0,0.5);
-      opacity: 0;
+      opacity: 1;
       @include transition(0.4s);
       p{
         display: block;
