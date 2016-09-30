@@ -61,6 +61,7 @@
             font-family: $qanelassemibold;
             font-size: 18px;
             padding: 20px 15px;
+            @include transition(0.4s);
             &:hover{
               color: #ffffff;
             }

@@ -9,11 +9,14 @@
   -webkit-background-size: cover;
   background-size: cover;
   background-attachment: fixed;
+  padding: 30px 0px;
   &__box{
     display: block;
     position: relative;
     width: 100%;
     float: left;
+    /*background-color: rgba(128,128,128,0.7);
+    padding: 5px;*/
   }
   &__item{
     display: flex;
@@ -29,7 +32,7 @@
       flex: 0 0 20%;
       position: relative;
       padding: 10px;
-      height: 150px;
+      height: 185px;
       float: left;
       overflow: hidden;
       margin: 0px auto;
@@ -41,22 +44,33 @@
     }
     &--content{
       flex: 0 0 80%;
-      height: 150px;
       overflow: hidden;
       position: relative;
       float: left;
       padding: 10px;
-      color: #ffffff;
-      font-size: 14px;
-      font-family: $qanelasregular;
       border-left: 1px solid #ffffff;
       a{
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 150px;
+        overflow: hidden;
+        float: left;
         color: #ffffff;
+        font-size: 14px;
+        font-family: $qanelasregular;
         &:hover{
           color: #ffffff;
         }
       }
+      .date{
+        display: block;
+        position: relative;
+        float: left;
+        color: #ffffff;
+        font-size: 14px;
+        font-family: $qanelasregular;
+      }
     }
   }
-
 }
