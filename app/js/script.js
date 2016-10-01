@@ -1,5 +1,27 @@
 $(document).ready(function(){
 
+    /*header-top menu*/
+    $(window).scroll(function () {
+
+        var header = $('.header');
+        var headerLogo = $('.header__logo');
+        var headerNav = $('.header__navbar');
+
+
+        if($(this).scrollTop() >= 60){
+            header.addClass('fixed');
+            headerLogo.css({width: '10%'});
+            headerNav.css({width: '90%'});
+        }
+        else {
+            header.removeClass('fixed');
+            headerLogo.css({width: '30%'});
+            headerNav.css({width: '70%'});
+        }
+    });
+    /*close header-top menu*/
+
+    /*top-slider*/
     var topSlider = $('.top-slider__box');
 
     topSlider.on('changed.owl.carousel', function(event) {
@@ -25,7 +47,8 @@ $(document).ready(function(){
             }
         }
     });
-    /*market yandex map*/
+    /*close top-slider*/
+    /*footer yandex map*/
     if ($('#footerMap').length > 0) {//проверяет наличие блока на странице
 
         ymaps.ready(function () {
@@ -52,5 +75,5 @@ $(document).ready(function(){
             myMap.geoObjects.add(myPlacemark);
         });
     };
-    /*close market yandex map*/
+    /*close footer yandex map*/
 });

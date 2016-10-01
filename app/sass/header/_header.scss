@@ -4,12 +4,14 @@
   width: 100%;
   float: left;
   background-color: #630845;
+  z-index: 6;
   &__logo{
     display: block;
     position: relative;
     width: 30%;
     float: left;
     margin-top: 10px;
+    transition: width 0.4s ease-in-out;
     &--img{
       display: block;
       position: relative;
@@ -28,6 +30,7 @@
     position: relative;
     width: 70%;
     float: left;
+    transition: width 0.4s ease-in-out;
     margin-bottom: 0px;
     .navbar {
       position: relative;
@@ -69,20 +72,20 @@
               box-sizing: border-box;
               content: '';
               position: absolute;
-              border-radius: 3px;
+              border-radius: 0px;
               top: 0;
               left: 0;
               width: 100%;
               height: 100%;
             }
             &::before {//блоку перед ссылкой добавляется
-              border-top: 2px solid #72385f;//граница сверху
-              border-bottom: 2px solid #72385f;//граница снизу
+              border-top: 3px solid #ffffff;//граница сверху
+              border-bottom: 3px solid #ffffff;//граница снизу
               transform: scale3d(0,1,1); // сжимаем только ширину до 0
             }
             &::after {//блоку после ссылки добавляется
-              border-left: 2px solid #72385f;//граница слева
-              border-right: 2px solid #72385f;//граница справа
+              border-left: 3px solid #ffffff;//граница слева
+              border-right: 3px solid #ffffff;//граница справа
               transform: scale3d(1,0,1); // сжимаем только высоту до 0
             }
             &:hover::before, &:hover::after {//при наведении на ссылку
@@ -175,4 +178,9 @@
       }*/
     }
   }
+}
+.fixed{
+  position: fixed;
+  top: 0;
+  left: 0;
 }
