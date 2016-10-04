@@ -10,8 +10,8 @@ $(document).ready(function(){
 
         if($(this).scrollTop() >= 60){
             header.addClass('fixed');
-            headerLogo.css({width: '10%'});
-            headerNav.css({width: '90%'});
+            headerLogo.css({width: '0%'});           
+            headerNav.css({width: '100%'});
         }
         else {
             header.removeClass('fixed');
