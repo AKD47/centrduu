@@ -1,0 +1,36 @@
+.us{
+  display: block;
+  position: relative;
+  width: 100%;
+  float: left;
+  background-color: #fff;
+  .nav-tabs{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+    position: relative;
+    border: none;
+    margin: 10px 0px;
+    li{
+      flex: 1 0 0;
+      position: relative;
+      float: left;
+      margin: 0;
+      a{
+        margin: 0px;
+        border: none;
+        border-radius: 0px;
+      }
+    }
+    li.active{
+      a{
+        margin: 0px;
+        border: none;
+        border-radius: 0px;
+        color: white;
+        background-color: #630845;
+      }
+    }
+  }
+}
