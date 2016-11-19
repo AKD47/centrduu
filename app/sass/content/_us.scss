@@ -4,6 +4,11 @@
   width: 100%;
   float: left;
   background-color: #fff;
+  background-image: url("../img/top-slider-bg.png");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;
   .nav-tabs{
     display: flex;
     flex-wrap: wrap;
@@ -11,25 +16,30 @@
     width: 100%;
     position: relative;
     border: none;
-    margin: 10px 0px;
+    margin: 10px 0;
     li{
       flex: 1 0 0;
       position: relative;
       float: left;
       margin: 0;
       a{
-        margin: 0px;
+        margin: 0;
         border: none;
-        border-radius: 0px;
+        border-radius: 0;
+        color: #000;
+        text-align: center;
+        text-transform: uppercase;
       }
     }
     li.active{
       a{
-        margin: 0px;
+        margin: 0;
         border: none;
-        border-radius: 0px;
+        border-radius: 0;
         color: white;
         background-color: #630845;
+        text-align: center;
+        text-transform: uppercase;
       }
     }
   }

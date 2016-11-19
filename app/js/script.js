@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
     /*header-top menu*/
-    $(window).scroll(function () {
+    /*$(window).scroll(function () {
 
         var header = $('.header');
         var headerLogo = $('.header__logo');
@@ -18,7 +18,7 @@ $(document).ready(function(){
             headerLogo.css({width: '30%'});
             headerNav.css({width: '70%'});
         }
-    });
+    });*/
     /*close header-top menu*/
 
     /*top-slider*/
@@ -29,8 +29,8 @@ $(document).ready(function(){
     });
 
     topSlider.owlCarousel({
-        animateIn: 'fadeIn',
-        animateOut: 'fadeOut',
+        /*animateIn: 'fadeIn',
+        animateOut: 'fadeOut',*/
         loop: true,
         margin: 10,
         nav: false,
