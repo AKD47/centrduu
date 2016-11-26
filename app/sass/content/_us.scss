@@ -43,4 +43,18 @@
       }
     }
   }
+  .tab-content{
+    display: block;
+    position: relative;
+    width: 100%;
+    float: left;
+    .tab-pane{
+      img{
+        display: block;
+        position: relative;
+        margin: 10px 20px;
+        float: left;
+      }
+    }
+  }
 }

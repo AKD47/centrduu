@@ -112,18 +112,18 @@ gulp.task("clean", function (cb) {
   rimraf('./js/script.min.js', cb);
 });
 
-gulp.task('extend', function () {
-    gulp.src('./app/html/pages/*.html')
+/*gulp.task('extend', function () {
+    gulp.src('./app/html/pages/!*.html')
         .pipe(extender({annotations:true,verbose:false})) // default options
         .pipe(gulp.dest('./'))
 
-});
+});*/
 
-gulp.task('watch', ['compress', 'extend', 'css-libs', 'img', 'sass'], function() {
+gulp.task('watch', ['compress', 'css-libs', 'img', 'sass'], function() {
     gulp.watch('app/libs/**/*', ['css-libs']); // Наблюдение за папкой libs
     gulp.watch('app/img/**/*', ['img']);// Наблюдение за папкой img
     gulp.watch('app/sass/**/*.scss', ['sass']); // Наблюдение за sass файлами в папке sass
-    gulp.watch(['app/html/*.html'], ['extend']);// Наблюдение за HTML-файлами
+   /* gulp.watch(['app/html/!*.html'], ['extend']);// Наблюдение за HTML-файлами*/
     gulp.watch('app/js/**/*.js', ['compress']); // Наблюдение за js-файлами
 });
 

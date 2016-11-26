@@ -4,7 +4,7 @@
   width: 100%;
   float: left;
   background-color: #fff;
-  background-image: url("../img/news-bg.png");
+  background-image: url("../img/top-slider-bg.png");
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
@@ -42,6 +42,14 @@
       width: 100%;
       float: left;
       padding: 10px;
+      p{
+        position: relative;
+        margin-top: 10px;
+        margin-bottom: 50px;
+        color: #fff;
+        font-size: 14px;
+        line-height: 31px;
+      }
     }
     &--img{
       display: block;
