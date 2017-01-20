@@ -13,7 +13,7 @@
 <html <?php language_attributes(); ?>>
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
-<meta name="viewport" content="width=1366">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta name="format-detection" content="telephone=no">
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <?php wp_head(); ?>
