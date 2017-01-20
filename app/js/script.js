@@ -48,32 +48,57 @@ $(document).ready(function(){
         }
     });
     /*close top-slider*/
-    /*footer yandex map*/
-    if ($('#footerMap').length > 0) {//проверяет наличие блока на странице
-
-        ymaps.ready(function () {
-
-            var myMap = new ymaps.Map('footerMap', {
-                // При инициализации карты, обязательно нужно указать
-                // ее центр и коэффициент масштабирования
-                center: [55.548726, 37.74242],
-                zoom: 17
-            });
-            // Создание метки 
-            var myPlacemark = new ymaps.Placemark(
-                // Координаты метки
-                [48.000663, 37.811438] , {
-                    // Свойства
-                    // Текст метки
-                    iconContent: 'Центр детского творчества'
-                }, {
-                    // Опции
-                    // Иконка метки будет растягиваться под ее контент
-                    preset: 'twirl#blueStretchyIcon'
-                });
-            // Добавление метки на карту
-            myMap.geoObjects.add(myPlacemark);
-        });
-    };
-    /*close footer yandex map*/
+    /*contacts yandex map*/
+    var map = new Map();    
+    map.init({        
+        selector:'#contactsMap',
+        center:'г. Донецк, ул. 50-летия СССР, дом 108',
+        zoom: 15,
+        placemarks: [
+            {
+                address:'г. Донецк, ул. 50-летия СССР, дом 108',
+                options: [
+                    {key:'draggable',value:false}
+                ],
+                properties: [
+                    {key:'hintContent',value:'МОУДОД «ДОМ ДЕТСКОГО ТВОРЧЕСТВА ВОРОШИЛОВСКОГО РАЙОНА ГОРОДА ДОНЕЦКА»'},
+                    {key:'balloonContentHeader', value:"Предприятия Донецка"},
+                    {key:'balloonContentBody', value:"<h1>ArtCraft</h1>"}
+                ]
+            }
+        ]
+    });
+    /*close contacts yandex map*/
+    
+    /*validation*/
+    if(document.getElementById('feedback')){//проверка наличия формы на странице
+        var validation = new Validation();//переменная для библиатеки валидации
+        
+        validation.init(//инициализация валидации
+            {
+                ajax: true,
+                ajaxUrl: myajax.url,
+                classItem: "contacts__form--field",//елемент, который нужно провалидировать 
+                eventElement: '#submitFeedback',//событие по клику кнопки 'Отправить'
+                items: [//масив объектов
+                    {
+                       item: 'email', tpl: 'email', tplMsg: 'некорректный e-mail'//объект эл.почта с сообщением о некорректном вводе
+                    },
+                    {
+                        item: 'name', tpl: 'kir+lat', tplMsg: 'только буквы'//объект имя с сообщением о некорректном вводе
+                    }                    
+                ],
+                ajaxSubmitSuccess: function (responseText, err, form) {
+                    if (!err) {
+                        /*form.submit();*/
+                        alert('Сообщение успешно отправлено!');
+                        validation.clearInput('name');
+                        validation.clearInput('email');
+                        validation.clearInput('message');
+                    }
+                }
+            }
+        )
+    }
+    /*closevalidation*/    
 });

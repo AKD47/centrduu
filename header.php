@@ -48,16 +48,7 @@
 							<?php wp_nav_menu(array(
 								'theme_location'  => 'primary',
 								'menu_class'      => 'nav navbar-nav',
-							)); ?>
-							<!--<ul class="nav navbar-nav">
-
-								<li class="active"><a href="index.html">главная</a></li>
-								<li><a href="about-us.html">о нас</a></li>
-								<li><a href="news.html">новости</a></li>
-								<li><a href="clubs.html" target="_blank">клубы</a></li>
-								<li><a href="#">контакты</a></li>
-
-							</ul>-->
+							)); ?>							
 
 						</div><!-- /.navbar-collapse -->
 					</div><!-- /.container-fluid -->

@@ -1,0 +1,164 @@
+.contacts{
+  display: block;
+  position: relative;
+  width: 100%;
+  float: left;
+  background-color: #fff;
+  background-image: url("../img/contacts.png");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 30px 0;
+  &__box{
+    display: block;
+    position: relative;
+    width: 100%;
+    float: left;
+    background-color: rgba(0,0,0,0.8);
+    padding: 20px;
+  }
+  &__title{
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+  }
+  &__subtitle{
+    display: block;
+    position: relative;
+    width: 100%;
+    float: left;
+    text-align: left;
+    text-transform: uppercase;
+    color: #fff;
+  }
+  p{
+    display: block;
+    position: relative;
+    width: 100%;
+    float: left;
+    color: #fff;
+    line-height: 22px;
+  }
+  &__phone{
+    display: block;
+    position: relative;
+    float: left;
+    font-size: 14px;
+    font-family: $qanelaslight;
+    line-height: 22px;
+    color: #fff;
+    text-decoration: none;
+    &:hover{
+      color: #ff9d20;
+      text-decoration: underline;
+    }
+  }
+  &__form{
+    display: block;
+    position: relative;
+    width: 100%;
+    float: left;
+    padding: 20px;
+    @include box-sizing;
+    background-color: #efece2;
+    border: 1px solid #1985fa;
+    margin-bottom: 50px;
+    &--field{
+      display: block;
+      position: relative;
+      width: 49%;
+      float: left;
+      border: 1px solid #d1d1d1;
+      border-radius: 4px;
+      padding: 10px;
+      color: #222222;
+      outline: none;
+      margin-bottom: 20px;
+      font-style: italic;
+    }
+    &--field:nth-of-type(2){
+      float: right;
+    }
+    &--textarea{
+      display: block;
+      position: relative;
+      width: 100%;
+      height: 250px;
+      float: left;
+      border: 1px solid #d1d1d1;
+      border-radius: 4px;
+      padding: 10px;
+      color: #222222;
+      outline: none;
+      margin-bottom: 20px;
+      font-style: italic;
+    }
+    &--submit{
+      display: block;
+      position: relative;
+      float: left;
+      width: 300px;
+      height: 50px;
+      margin-left: calc(50% - (300px/2));
+      background-color: #6979f4;
+      border-radius: 4px;
+      color: white;
+      font-family: $qanelaslight;
+      font-size: 16px;
+      line-height: 22px;
+      border: none;
+      &:focus{
+        outline: none;
+      }
+    }
+  }
+  &__map{
+    display: block;
+    position: relative;
+    float: left;
+    margin: 30px 0;
+    width: 100%;
+    height: 550px;
+    background-color: #fff;
+    #contactsMap{
+      display: block;
+      position: relative;
+      width: 100%;
+      height: 100%;
+      float: left;
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
+.inputError{
+  border: 1px solid #f0424a;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+.errorMsgClass{
+  display: block;
+  position: absolute;
+  width: 48%;
+  top: 0;
+  left: 24px;
+  color: #f0424a;
+  font-family: $qanelaslight;
+  font-size: 16px;
+  line-height: 22px;
+}
+.errorMsgClass:nth-of-type(2){
+  display: block;
+  position: absolute;
+  width: 48%;
+  top: 0;
+  left: 52%;
+  color: #f0424a;
+  font-family: $qanelaslight;
+  font-size: 16px;
+  line-height: 22px;
+}

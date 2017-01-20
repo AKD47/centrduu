@@ -12,46 +12,52 @@
  * @package moudod
  */
 
-get_header();?>
-	<section class="news">
+get_header(); ?>
+    <section class="news">
 
-		<div class="container">
-			<div class="row">
+        <div class="container">
+            <div class="row">
 
-				<div class="news__box">
-
-
+                <div class="news__box">
 
 
-<?php
-	while ( have_posts() ) : the_post(); ?>
-		<div class="news__item">
+                    <?php
+                    while (have_posts()) : the_post(); ?>
+                        <div class="news__item">
 
-			<div class="news__item--img">
+                            <div class="news__item--img">
 
-				<?php the_post_thumbnail(); ?>
+                                <?php the_post_thumbnail(); ?>
 
-			</div>
+                            </div>
 
-			<div class="news__item--content">
+                            <div class="news__item--content">
 
-				<h3><?php the_title(); ?></h3>
+                                <h3><?php the_title(); ?></h3>
 
-				<a href="<?php the_permalink(); ?>"><?php $content = get_the_content();
-					echo wp_filter_nohtml_kses( $content );?></a>
+                                <a href="<?php the_permalink(); ?>"><?php $content = get_the_content();
+                                    echo wp_filter_nohtml_kses($content); ?></a>
 
-				<span class="date">Опубликовано <?php echo get_the_date('d.m.Y'); ?></span>
+                                <span class="date">Опубликовано <?php echo get_the_date('d.m.Y'); ?></span>
 
-			</div>
+                            </div>
 
-		</div>
-	<?php endwhile; // End of the loop.?>
+                        </div>
+                    <?php endwhile; // End of the loop.
+                    the_posts_pagination(array(
+                        'show_all' => true, // показаны все страницы участвующие в пагинации 
+                        'end_size' => 1, // количество страниц на концах 
+                        'mid_size' => 1, // количество страниц вокруг текущей 
+                        'prev_next' => false, // выводить ли боковые ссылки "предыдущая/следующая страница". 
+                        'screen_reader_text' => '',
+                    )); ?>
+                    
 
-				</div>
+                </div>
 
-			</div>
-		</div>
+            </div>
+        </div>
 
-	</section>
+    </section>
 <?php
 get_footer();

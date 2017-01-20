@@ -83,3 +83,47 @@
     }
   }
 }
+.pagination{
+  display: block;
+  position: relative;
+  width: 100%;
+  float: left;
+  margin: 10px 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  text-align: center;
+  .screen-reader-text{
+    display: block;
+    position: relative;
+    width: 100%;
+    float: left;
+    text-align: center;
+    text-transform: lowercase;
+    margin: 10px 0;
+    color: #fff;
+  }
+  .nav-links{
+    display: block;
+    position: relative;
+    width: 100%;
+    float: left;
+    text-align: center;
+    .page-numbers{
+      display: inline-block;
+      position: relative;
+      width: 22px;
+      height: 22px;
+      text-align: center;
+      color: #fff;
+      border: 1px solid #fff;
+      margin: 5px 5px;
+      &:hover{
+        color: #ff9d20;
+        border: 1px solid #ff9d20;
+      }
+    }
+    .current{
+      color: #ff9d20;
+      border: 1px solid #ff9d20;
+    }
+  }
+}
