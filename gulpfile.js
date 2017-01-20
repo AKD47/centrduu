@@ -43,33 +43,6 @@ gulp.task('css-libs', function() { // Создаем таск css-libs
         })) // Обновляем CSS на странице при изменении
 });
 
-/*gulp.task('sprite', function() {
-    var spriteData =
-        gulp.src('app/img/icons/sprite/!*.*') // путь, откуда берем картинки для спрайта
-            .pipe(spritesmith({
-                imgName: 'sprite.png',
-                cssName: '_sprite.scss',
-                cssFormat: 'scss',
-                algorithm: 'binary-tree',
-                /!*cssTemplate: 'stylus.template.mustache',
-                cssVarMap: function(sprite) {
-                    sprite.name = 's-' + sprite.name
-                }*!/
-            }));
-
-    spriteData.img.pipe(gulp.dest('img/icons/sprites/')); // путь, куда сохраняем картинку
-    spriteData.css.pipe(gulp.dest('app/sass/base/')); // путь, куда сохраняем стили
-});*/
-
-/*gulp.task('js-libs', function() {
-    return gulp.src([ // Берем все необходимые библиотеки
-            'app/libs/jquery/dist/jquery.min.js'
-        ])
-        .pipe(concat('libs.min.js')) // Собираем их в кучу в новом файле libs.min.js
-        .pipe(uglify()) // Сжимаем JS файл
-        .pipe(gulp.dest('js')); // Выгружаем в папку app/js
-});*/
-
 gulp.task('sass', function() { // Создаем таск Sass
     var processors = [
         assets,
@@ -78,11 +51,7 @@ gulp.task('sass', function() { // Создаем таск Sass
         fixes,
         autoprefixer(['last 5 versions', '> 5%', 'ie 8', 'ie 7'], {
             cascade: true
-        }),
-         /*pxtorem({
-         rootValue: 14,
-         replace: false
-         }),*/
+        }),         
         focus,
         sorting(),
         stylefmt,
@@ -127,8 +96,7 @@ gulp.task('compress', ['clean'], function() {// Создаем таск compress
             suffix: ".min",// Добавляем суффикс .min
             extname: ".js"// Добавляем окончание .js
         }))
-        .pipe(uglify()) // Сжимаем JS файл
-        /*.pipe(gulpif(argv.production, uglify())) // <- добавляем вот эту строчку (Сжимаем JS файл)*/
+        .pipe(uglify()) // Сжимаем JS файл       
         .pipe(plumber.stop())
         .pipe(gulp.dest('js'));// Выгружаем в папку js
 
@@ -150,12 +118,10 @@ gulp.task('extend-blocks', function () {
         .pipe(gulp.dest('./'))
 });
 
-gulp.task('watch', ['compress', 'extend-pages', 'css-libs', 'img', 'sass'], function() {
+gulp.task('watch', ['compress', 'css-libs', 'img', 'sass'], function() {
     gulp.watch('app/libs/**/*', ['css-libs']); // Наблюдение за папкой libs
     gulp.watch('app/img/**/*', ['img']);// Наблюдение за папкой img
-    gulp.watch('app/sass/**/*.scss', ['sass']); // Наблюдение за sass файлами в папке sass
-    gulp.watch(['app/html/**/*.html'], ['extend-pages']);// Наблюдение за HTML-файлами в папке html/pages
-   /* gulp.watch(['app/html/!*.html'], ['extend-blocks']);// Наблюдение за HTML-файлами в папке html*/
+    gulp.watch('app/sass/**/*.scss', ['sass']); // Наблюдение за sass файлами в папке sass   
     gulp.watch('app/js/**/*.js', ['compress']); // Наблюдение за js-файлами
 });
 
@@ -175,23 +141,6 @@ gulp.task('img', function() {
             stream: true
         }));
 });
-
-
-/*gulp.task('build', ['img', 'sass', 'scripts'], function() {
-
-    var buildCss = gulp.src([ // Переносим библиотеки в продакшен
-            'app/css/main.css',
-            'app/css/libs.min.css'
-        ])
-        .pipe(gulp.dest('css'))
-
-    var buildFonts = gulp.src('app/fonts/!**!/!*') // Переносим шрифты в продакшен
-        .pipe(gulp.dest('fonts'))
-
-    var buildJs = gulp.src('app/js/!**!/!*') // Переносим скрипты в продакшен
-        .pipe(gulp.dest('js'))
-
-});*/
 
 gulp.task('clear', function(callback) {
     return cache.clearAll();
