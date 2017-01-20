@@ -497,6 +497,8 @@ p {
     margin: 30px 0px;
     padding: 10px;
     background-color: rgba(0, 0, 0, 0.7); }
+    .clubs__box .pagination {
+      background-color: transparent; }
   .clubs__item {
     display: flex;
     flex-wrap: wrap;
