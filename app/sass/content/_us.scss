@@ -1,7 +1,8 @@
-.us{
+.us {
   display: block;
   position: relative;
   width: 100%;
+  height: calc(70vh - 60px - 272px);
   float: left;
   background-color: #fff;
   background-image: url("../img/top-slider-bg.png");
@@ -9,7 +10,7 @@
   -webkit-background-size: cover;
   background-size: cover;
   background-attachment: fixed;
-  .nav-tabs{
+  .nav-tabs {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -17,22 +18,27 @@
     position: relative;
     border: none;
     margin: 10px 0;
-    li{
+    li {
       flex: 1 0 0;
       position: relative;
       float: left;
       margin: 0;
-      a{
+      border: 2px solid white;
+      a {
         margin: 0;
         border: none;
         border-radius: 0;
-        color: #000;
+        color: #fff;
         text-align: center;
         text-transform: uppercase;
+        &:hover {
+          background-color: #630845;
+        }
       }
     }
-    li.active{
-      a{
+    li.active {
+      border: 2px solid #630845;
+      a {
         margin: 0;
         border: none;
         border-radius: 0;
@@ -43,18 +49,32 @@
       }
     }
   }
-  .tab-content{
+  .tab-content {
     display: block;
     position: relative;
     width: 100%;
     float: left;
-    .tab-pane{
-      img{
+    .tab-pane {
+      img {
         display: block;
         position: relative;
         margin: 10px 20px;
         float: left;
       }
+    }
+  }
+  &__doc {
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-family: $qanelassemibold;
+    &:hover {
+      color: #fff;
+      text-decoration: underline;
     }
   }
 }

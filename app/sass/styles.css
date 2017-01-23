@@ -593,6 +593,7 @@ p {
   display: block;
   position: relative;
   width: 100%;
+  height: calc(70vh - 60px - 272px);
   float: left;
   background-color: #fff;
   background-image: url("../img/top-slider-bg.png");
@@ -612,22 +613,27 @@ p {
       flex: 1 0 0;
       position: relative;
       float: left;
-      margin: 0; }
+      margin: 0;
+      border: 2px solid white; }
       .us .nav-tabs li a {
         margin: 0;
         border: none;
         border-radius: 0;
-        color: #000;
+        color: #fff;
         text-align: center;
         text-transform: uppercase; }
-    .us .nav-tabs li.active a {
-      margin: 0;
-      border: none;
-      border-radius: 0;
-      color: white;
-      background-color: #630845;
-      text-align: center;
-      text-transform: uppercase; }
+        .us .nav-tabs li a:hover {
+          background-color: #630845; }
+    .us .nav-tabs li.active {
+      border: 2px solid #630845; }
+      .us .nav-tabs li.active a {
+        margin: 0;
+        border: none;
+        border-radius: 0;
+        color: white;
+        background-color: #630845;
+        text-align: center;
+        text-transform: uppercase; }
   .us .tab-content {
     display: block;
     position: relative;
@@ -638,6 +644,18 @@ p {
       position: relative;
       margin: 10px 20px;
       float: left; }
+  .us__doc {
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-family: "Qanelas Semi Bold"; }
+    .us__doc:hover {
+      color: #fff;
+      text-decoration: underline; }
 
 .single-new {
   display: block;
