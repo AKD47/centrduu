@@ -182,6 +182,14 @@
     width: 100%;
   }
 
+  .us .nav-tabs li {
+    flex: 1 1 100%;
+  }
+  .us__doc {
+    padding: 0 10px;
+    @include box-sizing;
+  }
+
   .footer{
     padding: 0 15px;
     @include box-sizing;

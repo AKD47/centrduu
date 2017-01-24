@@ -593,7 +593,8 @@ p {
   display: block;
   position: relative;
   width: 100%;
-  height: calc(70vh - 60px - 272px);
+  min-height: calc(70vh - 60px - 272px);
+  max-height: 100%;
   float: left;
   background-color: #fff;
   background-image: url("../img/top-slider-bg.png");
@@ -1106,6 +1107,13 @@ p {
 
   .submit-form__form {
     width: 100%; }
+
+  .us .nav-tabs li {
+    flex: 1 1 100%; }
+
+  .us__doc {
+    padding: 0 10px;
+    box-sizing: border-box; }
 
   .footer {
     padding: 0 15px;
